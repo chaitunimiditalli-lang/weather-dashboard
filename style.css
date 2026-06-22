@@ -2,40 +2,41 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
-    background: linear-gradient(135deg, #FFF9C4, #FFD54F);
     min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+    background:linear-gradient(135deg,#FFF9C4,#FFD54F);
 }
 
 .container{
-    background:#fff;
-    width:450px;
-    padding:30px;
+    width:500px;
+    background:#ffffff;
+    padding:35px;
     border-radius:20px;
     text-align:center;
-    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 h1{
-    margin-bottom:25px;
+    font-size:48px;
+    margin-bottom:30px;
     color:#222;
-    font-size:40px;
 }
 
 .search-box{
     display:flex;
     justify-content:center;
-    margin-bottom:25px;
+    gap:10px;
+    margin-bottom:30px;
 }
 
 .search-box input{
-    width:70%;
+    flex:1;
     padding:12px;
     border:1px solid #ccc;
     border-radius:8px;
@@ -45,19 +46,18 @@ h1{
 
 .search-box input:focus{
     border-color:#FFC107;
-    box-shadow:0 0 8px rgba(255,193,7,0.4);
+    box-shadow:0 0 10px rgba(255,193,7,0.4);
 }
 
 .search-box button{
-    margin-left:10px;
-    padding:12px 18px;
-    border:none;
-    border-radius:8px;
     background:#FFC107;
     color:#000;
-    font-size:16px;
-    font-weight:bold;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
     cursor:pointer;
+    font-size:16px;
+    font-weight:600;
     transition:0.3s;
 }
 
@@ -65,36 +65,30 @@ h1{
     background:#FFB300;
 }
 
-.weather-card{
-    margin-top:20px;
-}
-
 .weather-card h2{
-    font-size:36px;
-    color:#333;
-    margin-bottom:15px;
+    font-size:42px;
+    margin-bottom:20px;
+    color:#222;
 }
 
 .weather-card p{
-    margin:15px 0;
-    font-size:22px;
-    color:#444;
+    margin:18px 0;
+    font-size:28px;
+    color:#333;
 }
 
 .weather-card span{
     font-weight:bold;
-    color:#111;
 }
 
 #errorMsg{
     margin-top:15px;
     color:red;
-    font-size:18px;
-    font-weight:bold;
+    font-size:20px;
+    font-weight:600;
 }
 
-/* Responsive Design */
-@media(max-width:500px){
+@media(max-width:600px){
 
     .container{
         width:90%;
@@ -102,20 +96,22 @@ h1{
     }
 
     h1{
-        font-size:30px;
+        font-size:34px;
+    }
+
+    .weather-card h2{
+        font-size:32px;
+    }
+
+    .weather-card p{
+        font-size:22px;
     }
 
     .search-box{
         flex-direction:column;
     }
 
-    .search-box input{
-        width:100%;
-        margin-bottom:10px;
-    }
-
     .search-box button{
         width:100%;
-        margin-left:0;
     }
 }
